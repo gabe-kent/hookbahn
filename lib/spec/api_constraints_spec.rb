@@ -7,13 +7,13 @@ describe ApiConstraints do
   describe "matches?" do
 
     it "returns true when the version matches the 'Accept' header" do
-      request = double(host: 'api.marketplace.dev',
-                       headers: {"Accept" => "application/vnd.marketplace.v1"})
+      request = double(host: 'api.hookbahn.dev',
+                       headers: {"Accept" => "application/vnd.hookbahn.v1"})
       api_constraints_v1.matches?(request).should be true
     end
 
     it "returns the default version when 'default' option is specified" do
-      request = double(host: 'api.marketplace.dev')
+      request = double(host: 'api.hookbahn.dev')
       api_constraints_v2.matches?(request).should be true
     end
   end

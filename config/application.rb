@@ -21,6 +21,7 @@ module Hookbahn
 
     config.autoload_paths += %W(\#{config.root}/lib)
 
+    config.api_only = true
    
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
